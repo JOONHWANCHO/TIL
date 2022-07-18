@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style>
+	/*구조 선택자
+	
+	nth-child(2n) : 짝수번쨰
+	nth-child(2n+1) : 홀수번쨰 
+	nth-child(3n) : 3의 배수번쨰 
+	*/
+	
+	#menu li: nth-child(3n){
+		background-color: pink;
+	}
+	
+	#menu li: nth-child(3n+1){
+		background-color: lightblue;
+	}
+	
+	#menu li: nth-child(3n+2){
+		background-color:#ddd;
+	}
+	
+	/*
+		:first-child : 첫번째 객체
+		:last-child : 마지막객체 
+	*/
+	
+	#menu li:first-child{
+		color:red;
+	}
+	#menu li:last-child{
+		color:yellow;
+		font-size:1.2em;
+	}
+	
+</style>
+
+</head>
+<!-- html속성
+	선택불가되도록 설정하기 
+	oncontextmenu : 마우스 오른쪽 버튼 제어 
+	onselectstart, ondragstart : 드래그 시작 불가능
+	ondragend : 드래그 종료 불가능 
+ -->
+
+<body oncontextmenu="return false" onselectstart="return false">
+<div id="menu">
+	<ul>
+		<li>뉴스</li>
+		<li>자동차</li>
+		<li>경제</li>
+		<li>시사</li>
+		<li>웹툰</li>
+		<li>푸드</li>
+		<li>지도</li>
+		<li>뉴스</li>
+		<li>자동차</li>
+		<li>경제</li>
+		<li>시사</li>
+		<li>웹툰</li>
+		<li>푸드</li>
+		<li>지도</li>
+	</ul>
+</div>
+<style>
+	/* :nth-of-type()
+	   :first-of-type
+	   :last-of-type
+	*/
+	#menu li:nth-of-type(2n){
+		background:yellow;
+	}
+	#menu2 li:nth-of-type(2n+1){
+		background:olive;
+		color:#fff;
+	}
+	#menu2 li:first-of-type{
+		background:green;
+	}
+	#menu2 li:last-of-type{
+		background: red;
+	}
+	
+</style>
+
+<div id="menu2">
+	<ul>
+		<li>뉴스</li>
+		<li>자동차</li>
+		<li>경제</li>
+		<li>시사</li>
+		<li>웹툰</li>
+		<li>푸드</li>
+		<li>지도</li>
+		<li>뉴스</li>
+		<li>자동차</li>
+		<li>경제</li>
+		<li>시사</li>
+		<li>웹툰</li>
+		<li>푸드</li>
+		<li>지도</li>
+	</ul>
+</div>
+<style>
+	/*텍스트 스타일
+	::first-letter : 첫번째 문장에 대한 스타일 
+	::first-line : 첫번째 줄에 대한 스타일 
+	::selection : 선택영역에 대한 스타일 
+	*/
+	#txt::frst-letter{
+		font-size: 1.5em;
+		color:green;
+		font-weight:bold;
+		background:yellow;
+	}
+
+	#txt::first-line{
+		background:#ddd;
+		text-decoration:underline;
+	}
+	#txt::selection{
+		color:red;
+		background:#000;
+	}
+</style>
+<div id="txt">Here’s another edition of “Dear Sophie,” the advice column that answers immigration-related questions about working at technology companies.
+“Your questions are vital to the spread of knowledge that allows people all over the world to rise above borders and pursue their dreams,” says Sophie Alcorn, a Silicon Valley immigration attorney. “Whether you’re in people ops, a founder or seeking a job in Silicon Valley, I would love to answer your questions in my next column.
+</div>
+</body>
+</html>

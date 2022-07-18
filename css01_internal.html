@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+
+<!-- 
+	CSS : Cascade Style Sheet의 약자다.
+	1. inline : 태그에 직접 스타일을 적용 
+	2. internal : <style>태구를 이용하여 스타일시트를 모아 놓은 스타일 
+	3. External : 외부스타일 시트, 스타일시트코드만 있는 파일이 존재한다. 
+ -->
+ 
+<style>
+/* 주석
+
+	선택자{
+		속성: 속성값;
+		속성: 속성값;
+	
+	}
+
+*/
+/*태그 선택자*/
+span, b, strong{
+	color: #00f; /*	#ooooff*/
+	font-weight: 700;
+	font-size: 30px;
+}
+/*아이디 선택자*/
+#txt{
+	background: #ddd; /*	#dddddd*/
+}
+/*클래스 선택자*/
+.a{
+	background: #8a3;color: #fff; font-size: 50px; /*	#88aa33*/
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+Twitter has sued the Indian <strong>government to challenge</strong> some of the block orders on tweets and accounts, further escalating the tension in the key overseas market.
+In its lawsuit, <span id="txt">filed Tuesday</span> in the Karnataka High Court in Bengaluru, Twitter alleges that New Delhi had abused its power by ordering it to arbitrarily and disproportionately remove several tweets from its platform.
+<b>Additionally</b>, some block <span class="a">orders</span> “pertain to political content that is posted by official handles of political parties,” Twitter said in the lawsuit.
+“Blocking of such information is <span class="a">a violation</span> of the freedom of speech guaranteed to citizen-users of the platform. Further, the content at issue does not have any apparent proximate relationship to the grounds under Section 69A,” it argued.
+
+</body>
+</html>
